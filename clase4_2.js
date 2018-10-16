@@ -1,13 +1,15 @@
+var t;
+function reducir(){
+	var w_actual=window.outerWidth;
+	var h_actual=window.outerHeight;
+	
+	window.resizeTo(w_actual-5,h_actual-5);
+	if (w_actual<300 || h_actual<300)
+		window.clearInterval(t);
+}
 
 function maximizar(){
-	var w_actual=window.width;
-	var h_actual=window.height;
-	//window.resizeTo(window.screen.width,window.screen.height);
-	for (let i=0;i<500;i+=2){
-		//window.moveTo(i,0);
-		window.resizeTo(w_actual+i,h_actual);
-		for (let j=0;j<50;j++) console.log("");
-	}
-		
-	
+	window.resizeTo(window.screen.width,window.screen.height);
+	window.moveTo(0,0);
+	t=window.setInterval("reducir()",50)
 }

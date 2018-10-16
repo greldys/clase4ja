@@ -1,0 +1,28 @@
+<html>
+	<head>
+	
+	</head>
+	<body onload="load()" onclick="programar_cerrar()">
+		Se va a cerrar en 10 segundos...
+		<script>
+			var timerCerrar;
+			
+			function programar_cerrar(){
+				clearTimeout(timerCerrar);
+				timerCerrar=setTimeout("window.close()",10000);
+			}
+			function load(){
+				setInterval('is_on_line()',1000);
+				programar_cerrar();
+			}
+			function is_on_line(){
+				if (!window.navigator.onLine)
+					window.document.bgColor="red";
+				else
+					window.document.bgColor="white";
+			}
+
+			
+		</script>
+	</body>
+</html>

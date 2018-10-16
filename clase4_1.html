@@ -1,0 +1,31 @@
+<html>
+	<head>
+	
+	</head>
+	<body onload="mostrar()">
+		
+		<a href="#" 
+			onclick="window.location='clase4_1_b.html'">
+			Imprimir
+		</a> |
+		<a href="clase4_1_b.html" target="_blank"
+			>
+			Imprimir En otra pestaña
+		</a>
+		<script>
+			function mostrar(){
+				alert(window.navigator.appName+"\n"+	
+					  window.navigator.language+"\n"+
+					  window.navigator.userAgent+"\n"+
+					  window.navigator.onLine);
+				alert("Ancho: "+window.screen.width+
+				  ". Alto: "+window.screen.height+
+				  ". Ancho disponible: "+
+				  window.screen.availWidth+
+				  ". Alto disponible: "+
+				  window.screen.availHeight)
+			}
+			
+		</script>
+	</body>
+</html>
